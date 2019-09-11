@@ -1,6 +1,7 @@
 package com.fangpf.mybatis.test;
 
 import com.fangpf.mybatis.dao.UserDAO;
+import com.fangpf.mybatis.dao.impl.UserDAOImpl;
 import com.fangpf.mybatis.domain.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -23,7 +24,7 @@ import java.util.List;
 public class MybatisAppTest {
 
     private InputStream in = null;
-    private SqlSession sqlSession = null;
+//    private SqlSession sqlSession = null;
     private UserDAO userDAO = null;
 
     @Before //用于测试方法执行之前
@@ -34,23 +35,19 @@ public class MybatisAppTest {
         SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
         SqlSessionFactory factory = builder.build(in);
 //        //3.使用工厂创建dao对象
-//        UserDAO userDAO = new UserDAOImpl(factory);
-        sqlSession = factory.openSession();
-        //4.获取dao代理对象
-        userDAO = sqlSession.getMapper(UserDAO.class);
+        userDAO = new UserDAOImpl(factory);
     }
 
     @After
     public void destory() throws IOException {
-        sqlSession.commit();
+//        sqlSession.commit();
         //6.释放对象
         in.close();
-        sqlSession.close();
+//        sqlSession.close();
     }
 
     @Test
     public void testFindAll() throws Exception{
-
         //5.执行查询方法
         List<User> users = userDAO.findAll();
         for(User user:users){
@@ -61,9 +58,9 @@ public class MybatisAppTest {
     @Test
     public void testSave() throws IOException {
         User user = new User();
-        user.setUsername("小静");
-        user.setSex("女");
-        user.setAddress("四川九寨沟");
+        user.setUsername("小木");
+        user.setSex("男");
+        user.setAddress("河南信阳");
         user.setBirthday(new Date());
         //执行插入方法
         userDAO.saveUser(user);
@@ -74,10 +71,10 @@ public class MybatisAppTest {
     @Test
     public void update(){
         User user = new User();
-        user.setId(9);
-        user.setUsername("小澜");
-        user.setSex("女");
-        user.setAddress("山西太原");
+        user.setId(11);
+        user.setUsername("小飞");
+        user.setSex("男");
+        user.setAddress("山西运城");
         user.setBirthday(new Date());
         //执行插入方法
         userDAO.update(user);
@@ -86,18 +83,18 @@ public class MybatisAppTest {
 
     @Test
     public void delete(){
-        userDAO.delete(6);
+        userDAO.delete(10);
     }
 
     @Test
     public void findByID(){
-       User user =  userDAO.findByID(7);
+       User user =  userDAO.findByID(4);
         System.out.println(user);
     }
 
     @Test
     public void findByName(){
-        List<User> userList = userDAO.findByName("%小%");
+        List<User> userList = userDAO.findByName("%黑%");
         for(User user:userList){
             System.out.println(user);
         }
