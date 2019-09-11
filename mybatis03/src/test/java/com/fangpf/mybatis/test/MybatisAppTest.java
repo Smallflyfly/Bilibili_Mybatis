@@ -61,9 +61,9 @@ public class MybatisAppTest {
     @Test
     public void testSave() throws IOException {
         User user = new User();
-        user.setUsername("小雷");
-        user.setSex("男");
-        user.setAddress("四川成都");
+        user.setUsername("小静");
+        user.setSex("女");
+        user.setAddress("四川九寨沟");
         user.setBirthday(new Date());
         //执行插入方法
         userDAO.saveUser(user);

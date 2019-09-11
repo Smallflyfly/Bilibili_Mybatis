@@ -10,6 +10,9 @@
     </select>
     
     <insert id="saveUser" parameterType="com.fangpf.mybatis.domain.User">
+        <selectKey keyProperty="id" keyColumn="id" resultType="Integer" order="AFTER">
+            select last_insert_id();
+        </selectKey>
         insert into user(username, address, sex, birthday) values (#{username}, #{address}, #{sex}, #{birthday});
     </insert>
 
