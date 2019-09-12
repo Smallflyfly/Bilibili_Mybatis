@@ -21,7 +21,7 @@ import java.util.List;
  * @version 1.0
  * @date 2019-09-05 10:30
  */
-public class MybatisAppTest {
+public class MybatisAUserAppTest {
 
     private InputStream in = null;
 //    private SqlSession sqlSession = null;
@@ -52,57 +52,8 @@ public class MybatisAppTest {
         List<User> users = userDAO.findAll();
         for(User user:users){
             System.out.println(user);
+            System.out.println(user.getAccounts());
         }
     }
 
-    @Test
-    public void testSave() throws IOException {
-        User user = new User();
-        user.setUsername("小木");
-        user.setSex("男");
-        user.setAddress("河南信阳");
-        user.setBirthday(new Date());
-        //执行插入方法
-        userDAO.saveUser(user);
-        //提交事务
-//        sqlSession.commit();
-    }
-
-    @Test
-    public void update(){
-        User user = new User();
-        user.setId(11);
-        user.setUsername("小飞");
-        user.setSex("男");
-        user.setAddress("山西运城");
-        user.setBirthday(new Date());
-        //执行插入方法
-        userDAO.update(user);
-//        sqlSession.commit();
-    }
-
-    @Test
-    public void delete(){
-        userDAO.delete(10);
-    }
-
-    @Test
-    public void findByID(){
-       User user =  userDAO.findByID(4);
-        System.out.println(user);
-    }
-
-    @Test
-    public void findByName(){
-        List<User> userList = userDAO.findByName("%黑%");
-        for(User user:userList){
-            System.out.println(user);
-        }
-    }
-
-    @Test
-    public void countUsername(){
-        Integer count = userDAO.countUsername();
-        System.out.println(count);
-    }
 }

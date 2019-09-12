@@ -11,31 +11,9 @@ import java.util.List;
  */
 public interface UserDAO {
     /**
-     * 查询所有操作
+     * 查询所有操作  同时获取到用户下所有账户信息
      * */
     List<User> findAll();
 
-    /**
-     * 插入操作
-     * */
-    void saveUser(User user);
 
-    /**
-     * update
-     * */
-    void update(User user);
-
-    /**
-     * delete
-     */
-    void delete(Integer id);
-
-    /**
-     * find by id
-     * */
-    User findByID(Integer id);
-
-    List<User> findByName(String username);
-
-    Integer countUsername();
 }
