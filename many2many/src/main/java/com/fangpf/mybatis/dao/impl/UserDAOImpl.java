@@ -1,6 +1,7 @@
 package com.fangpf.mybatis.dao.impl;
 
 import com.fangpf.mybatis.dao.UserDAO;
+import com.fangpf.mybatis.domain.Role;
 import com.fangpf.mybatis.domain.User;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -29,4 +30,12 @@ public class UserDAOImpl implements UserDAO {
         session.close();
         return users;
     }
+
+    @Override
+    public List<User> findAllRoles() {
+        SqlSession session = factory.openSession();
+        List<User> users = session.selectList("com.fangpf.mybatis.dao.UserDAO.findAllRoles");
+        return users;
+    }
+
 }

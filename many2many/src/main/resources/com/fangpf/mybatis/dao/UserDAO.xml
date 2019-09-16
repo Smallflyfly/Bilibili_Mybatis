@@ -19,8 +19,28 @@
             <result property="money" column="money"/>
         </collection>
     </resultMap>
+    
+    <resultMap id="userRoleMap" type="user">
+        <id property="id" column="id"></id>
+        <result property="username" column="username"></result>
+        <result property="address" column="address"></result>
+        <result property="sex" column="sex"></result>
+        <result property="birthday" column="birthday"></result>
+        <collection property="roles" ofType="role">
+            <id property="roleId" column="rid"></id>
+            <result property="roleName" column="role_name"></result>
+            <result property="roleDesc" column="role_desc"></result>
+        </collection>
+    </resultMap>
+    
     <!--配置查询所有  其中id不能乱写必须是dao接口中的方法  resultType写的是实体类的全路径-->
     <select id="findAll" resultMap="userAccountMap">
         select *, a.id as aid from user u left outer join account a on u.id = a.uid;
+    </select>
+
+    <select id="findAllRoles" resultMap="userRoleMap">
+        SELECT u.*, r.id as rid, r.role_name, r.role_desc FROM user u
+            left outer join user_role ur on u.id = ur.uid
+            left outer join role r on ur.rid = r.id
     </select>
 </mapper>

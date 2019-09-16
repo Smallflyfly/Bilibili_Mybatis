@@ -1,5 +1,6 @@
 package com.fangpf.mybatis.dao;
 
+import com.fangpf.mybatis.domain.Role;
 import com.fangpf.mybatis.domain.User;
 
 import java.util.List;
@@ -15,5 +16,6 @@ public interface UserDAO {
      * */
     List<User> findAll();
 
+    List<User> findAllRoles();
 
 }

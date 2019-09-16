@@ -56,4 +56,13 @@ public class MybatisAUserAppTest {
         }
     }
 
+    @Test
+    public void testFindAllRoles(){
+        List<User> users = userDAO.findAllRoles();
+        for(User user:users){
+            System.out.println(user);
+            System.out.println(user.getRoles());
+        }
+    }
+
 }
