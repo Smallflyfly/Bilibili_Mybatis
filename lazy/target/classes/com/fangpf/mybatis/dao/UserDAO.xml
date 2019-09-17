@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fangpf.mybatis.dao.UserDAO">
+    
+<!--    定义User的resultMap-->
+    <resultMap id="userAccountMap" type="user">
+        <id property="id" column="id"/>
+        <result property="username" column="username"/>
+        <result property="address" column="address"/>
+        <result property="sex" column="sex"/>
+        <result property="birthday" column="birthday"/>
+<!--        配置user对象中account集合映射-->
+        <collection property="accounts" ofType="account" select="com.fangpf.mybatis.dao.AccountDAO.findByUid" column="id">
+        </collection>
+    </resultMap>
+    <!--配置查询所有  其中id不能乱写必须是dao接口中的方法  resultType写的是实体类的全路径-->
+    <select id="findAll" resultMap="userAccountMap">
+        select * from user;
+    </select>
+
+    <select id="findById" resultType="com.fangpf.mybatis.domain.User" parameterType="Integer">
+        select * from user where id = #{id};
+    </select>
+
+</mapper>
