@@ -61,5 +61,4 @@ public class MybatisAUserAppTest {
         User user = userDAO.findById(2);
         System.out.println(user);
     }
-
 }
