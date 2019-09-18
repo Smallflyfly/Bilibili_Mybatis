@@ -1,6 +1,7 @@
 package com.fangpf.test;
 
 import com.fangpf.dao.UserDAO;
+import com.fangpf.domain.Account;
 import com.fangpf.domain.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -36,7 +37,7 @@ public class MybatisAnnoTest {
     }
 
     @After
-    public void destory() throws IOException {
+    public void destroy() throws IOException {
         session.close();
         in.close();
     }
@@ -46,7 +47,9 @@ public class MybatisAnnoTest {
         List<User> users = userDAO.findAll();
         for(User user:users){
             System.out.println(user);
+            System.out.println(user.getAccounts());
         }
+
         session.close();
         in.close();
     }

@@ -2,31 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3683718e-9c35-43b4-bac0-2d0a37748d34" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7cad8f23-611d-43b8-9309-8c0b25367ff4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/annotation_mybatis.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axis.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fangpf/dao/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fangpf/domain/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/SqlMapConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jdbcConfig.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/fangpf/test/MybatisAnnoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fangpf/dao/UserDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/fangpf/domain/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/jdbcConfig.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/fangpf/test/MybatisAnnoTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lazy/src/test/java/com/fangpf/mybatis/test/MybatisAUserAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lazy/src/test/java/com/fangpf/mybatis/test/MybatisAUserAppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fangpf/dao/AccountDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fangpf/domain/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/fangpf/test/AccoountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axis.log" beforeDir="false" afterPath="$PROJECT_DIR$/axis.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fangpf/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fangpf/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fangpf/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fangpf/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fangpf/test/MybatisAnnoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fangpf/test/MybatisAnnoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fangpf/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fangpf/dao/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fangpf/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fangpf/domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/fangpf/test/MybatisAnnoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/fangpf/test/MybatisAnnoTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,8 +111,40 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MybatisAnnoTest.findTotal">
-    <configuration name="MybatisAnnoTest.deleteUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.MybatisAnnoTest.findAll">
+    <configuration name="AccoountTest.findAccountById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="annotation_mybatis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fangpf.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.fangpf.test" />
+      <option name="MAIN_CLASS_NAME" value="com.fangpf.test.AccoountTest" />
+      <option name="METHOD_NAME" value="findAccountById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccoountTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="annotation_mybatis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fangpf.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.fangpf.test" />
+      <option name="MAIN_CLASS_NAME" value="com.fangpf.test.AccoountTest" />
+      <option name="METHOD_NAME" value="findAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MybatisAnnoTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="annotation_mybatis" />
       <extension name="coverage">
         <pattern>
@@ -136,7 +154,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.fangpf.test" />
       <option name="MAIN_CLASS_NAME" value="com.fangpf.test.MybatisAnnoTest" />
-      <option name="METHOD_NAME" value="deleteUser" />
+      <option name="METHOD_NAME" value="findAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -158,22 +176,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MybatisAnnoTest.findByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="annotation_mybatis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.fangpf.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.fangpf.test" />
-      <option name="MAIN_CLASS_NAME" value="com.fangpf.test.MybatisAnnoTest" />
-      <option name="METHOD_NAME" value="findByName" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MybatisAnnoTest.findTotal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="annotation_mybatis" />
       <extension name="coverage">
@@ -190,29 +192,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MybatisAnnoTest.insertUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="annotation_mybatis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.fangpf.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.fangpf.test" />
-      <option name="MAIN_CLASS_NAME" value="com.fangpf.test.MybatisAnnoTest" />
-      <option name="METHOD_NAME" value="insertUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MybatisAnnoTest.findTotal" />
-        <item itemvalue="JUnit.MybatisAnnoTest.findByName" />
+        <item itemvalue="JUnit.MybatisAnnoTest.findAll" />
+        <item itemvalue="JUnit.AccoountTest.findAll" />
+        <item itemvalue="JUnit.AccoountTest.findAccountById" />
         <item itemvalue="JUnit.MybatisAnnoTest.findById" />
-        <item itemvalue="JUnit.MybatisAnnoTest.deleteUser" />
-        <item itemvalue="JUnit.MybatisAnnoTest.insertUser" />
+        <item itemvalue="JUnit.MybatisAnnoTest.findTotal" />
       </list>
     </recent_temporary>
   </component>
@@ -247,7 +233,7 @@
       <option name="presentableId" value="Default" />
       <updated>1568703652975</updated>
       <workItem from="1568703654267" duration="5425000" />
-      <workItem from="1568731122187" duration="3061000" />
+      <workItem from="1568731122187" duration="8270000" />
     </task>
     <servers />
   </component>

@@ -1,9 +1,8 @@
 package com.fangpf.dao;
 
 import com.fangpf.domain.User;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
+import org.apache.ibatis.mapping.FetchType;
 
 import java.util.List;
 
@@ -15,6 +14,14 @@ import java.util.List;
 public interface UserDAO {
 
     @Select("select * from user")
+    @Results(id = "userMap", value = {
+            @Result(id=true, column = "id", property = "id"),
+            @Result(column = "userName", property = "userName"),
+            @Result(column = "address", property = "address"),
+            @Result(column = "sex", property = "sex"),
+            @Result(column = "birthday", property = "birthday"),
+            @Result(property = "accounts", column = "id", many = @Many(select = "com.fangpf.dao.AccountDAO.findAccountById", fetchType = FetchType.LAZY))
+    })
     List<User> findAll();
 
     @Insert("insert into user(username, address, sex, birthday) values (#{userName}, #{address}, #{sex}, #{birthday})")
@@ -24,6 +31,7 @@ public interface UserDAO {
     void DeleteUser(Integer id);
 
     @Select("select * from user where id = #{id}")
+    @ResultMap(value = {"userMap"})
     User findById(Integer id);
 
     @Select("select * from user where userName like #{userName}")
